@@ -4,4 +4,16 @@
 
 .ag-theme-alpine {
   height: 300;
+  width: "100%";
+}
+
+.ButtonsTop {
+  margin: 5px;
+  padding: 5px;
+}
+button {
+  margin: 5px;
+}
+.tabledata {
+  margin: 10px;
 }

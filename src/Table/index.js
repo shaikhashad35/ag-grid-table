@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AgGridColumn, AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+import "./style.css";
 
 export default function Table() {
   const [gridApi, setGridApi] = useState([]);
@@ -17,7 +18,7 @@ export default function Table() {
   };
   const GenderCell = (props) => {
     const { value } = props;
-    const icon = value == "Male"; // ? <genderCell/>:<genderCell/>;
+    const icon = value == "Male";
     return (
       <div>
         {icon}
@@ -42,8 +43,8 @@ export default function Table() {
   const rowSelectionType = "multiple";
 
   return (
-    <div>
-      <div style={{ padding: "10px" }}>
+    <div className="tabledata">
+      <div className="ButtonsTop">
         <button onClick={() => gridApi.applyTransaction({ add: [{}] })}>
           Add Row
         </button>
